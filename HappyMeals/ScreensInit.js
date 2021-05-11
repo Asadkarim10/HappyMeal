@@ -27,6 +27,15 @@ const StackRoutes = ({ navigation }) => {
     </Stack.Navigator>
   );
 }
+
+
+const SettingStackNavigator = (navigation) => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+    </Stack.Navigator>
+  );
+}
+
 // const SettingStackNavigator = (navigation) => {
 //   return (
 //     <Stack.Navigator screenOptions={screenOptionStyle}>

@@ -1,24 +1,31 @@
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+//import { StackNavigator } from 'react-navigation';
 import { enableScreens } from 'react-native-screens';
-import Signin from './signin'
-import Welcome from './welcome';
-import Login from './login'
-import ForgetPassword from './forgetPassword'
-import Delivering from './Delivering'
+import Signin from '../signin'
+import Welcome from '../welcome';
+import Login from '../login'
+import ForgetPassword from '../forgetPassword'
+import Delivering from '../Delivering'
+//import { withNavigation } from 'react-navigation';
 
 
-import CreateAccount from './createAccount'
+
+
+
+
+import CreateAccount from '../screens/createAccount'
 const Stack = createStackNavigator();
-enableScreens();
+// enableScreens();
 
 Stack.Navigator.defaultProps = {
   headerMode: 'none',
 };
 
-function MyStack() {
+const MyStack = ({navigation}) => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="welcome">
@@ -33,4 +40,14 @@ function MyStack() {
   );
 }
 
-export default MyStack;
+const SettingStackNavigator = (navigation) => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+    </Stack.Navigator>
+  );
+}
+
+export default () => {
+  return <MyStack />
+}
+

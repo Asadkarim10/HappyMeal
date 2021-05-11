@@ -18,7 +18,7 @@ class Home extends Component {
 
 <Image
           style={styles.tinyLogo}
-          source={require("../Assets/HM.jpeg")}
+          source={require("./Assets/HM.jpeg")}
         />
             </ScrollView>
 
